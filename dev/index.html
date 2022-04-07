@@ -6,7 +6,7 @@
     <title>&lt;my-element> Demo</title>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
-    <script type="module" src="../my-element.js"></script>
+    <script type="module" src="../just-inputs.js"></script>
     <style>
       p {
         border: solid 1px blue;
@@ -15,8 +15,12 @@
     </style>
   </head>
   <body>
-    <my-element>
-      <p>This is child content</p>
-    </my-element>
+    <div style="width: 40vw">
+      This component has some input elements. For whatever reason, the component
+      itself emits a blur event when the inputs are blurred and neither one has
+      focus. Focus events do not bubble, but somehow this component emits one.
+      Why?
+    </div>
+    <just-inputs> </just-inputs>
   </body>
 </html>
